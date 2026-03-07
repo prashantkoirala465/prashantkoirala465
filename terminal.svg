@@ -1,310 +1,246 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520"
-  font-family="'JetBrains Mono','Fira Code','Cascadia Code','Menlo',monospace">
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 800 488" width="800" height="488"
+     font-family="'JetBrains Mono','Fira Code','Cascadia Code','Menlo',monospace"
+     font-size="13.5">
 
-  <!-- ── outer window shell ── -->
-  <rect width="800" height="520" rx="12" ry="12" fill="#1a1b26"/>
+  <!-- ══════════════════════════════════════════
+       WINDOW SHELL
+  ══════════════════════════════════════════ -->
 
-  <!-- ── title bar ── -->
-  <rect width="800" height="38" rx="12" ry="12" fill="#24283b"/>
-  <rect y="20" width="800" height="18" fill="#24283b"/>
+  <!-- outer border / shadow -->
+  <rect width="800" height="488" rx="10" ry="10" fill="#11121a"/>
+
+  <!-- title bar -->
+  <rect width="800" height="38" rx="10" ry="10" fill="#1e2030"/>
+  <rect y="20" width="800" height="18" fill="#1e2030"/>
 
   <!-- traffic lights -->
-  <circle cx="22" cy="19" r="6" fill="#ff5f57"/>
-  <circle cx="44" cy="19" r="6" fill="#febc2e"/>
-  <circle cx="66" cy="19" r="6" fill="#28c840"/>
+  <circle cx="20" cy="19" r="5.5" fill="#ff5f57"/>
+  <circle cx="38" cy="19" r="5.5" fill="#febc2e"/>
+  <circle cx="56" cy="19" r="5.5" fill="#28c840"/>
 
-  <!-- title -->
-  <text x="400" y="24" text-anchor="middle"
-        fill="#565f89" font-size="12"
+  <!-- window title -->
+  <text x="400" y="23.5" text-anchor="middle"
+        fill="#444b6a" font-size="11.5"
         font-family="'JetBrains Mono','Fira Code',monospace">
     zsh  ·  ~/  ·  prashantkoirala465
   </text>
 
-  <!-- ── terminal body ── -->
-  <rect x="0" y="38" width="800" height="482" fill="#0d1117"/>
+  <!-- terminal body -->
+  <rect x="0" y="38" width="800" height="450" fill="#0d1117"/>
   <!-- round bottom corners -->
-  <rect x="0" y="482" width="800" height="38" fill="#0d1117"/>
-  <rect x="0" y="494" width="800" height="26" rx="12" ry="12" fill="#1a1b26"/>
-  <rect x="0" y="494" width="800" height="13" fill="#0d1117"/>
+  <rect x="0" y="450" width="800" height="38" fill="#0d1117"/>
+  <rect x="0" y="462" width="800" height="26" rx="10" ry="10" fill="#11121a"/>
+  <rect x="0" y="462" width="800" height="13" fill="#0d1117"/>
 
-  <!--
-  ═══════════════════════════════════════════════════════════════
-  TIMING MAP  (all via SMIL <animate> — works in GitHub SVG)
-  ═══════════════════════════════════════════════════════════════
+  <!-- ══════════════════════════════════════════
+       GRID: font-size 13.5px, char-width ~8px,
+             line-height 20px, left-pad 20px
+             first baseline y = 58
+  ══════════════════════════════════════════ -->
 
-  t=0.0s   prompt 1 appears
-  t=0.5s   "whoami" types  (7 chars × 80ms = 0.56s  →  done ~1.1s)
-  t=1.3s   output block 1 appears  (4 lines, each 130ms apart)
-  t=2.5s   prompt 2 appears
-  t=3.0s   "cat about.txt" types  (14 chars × 70ms = 0.98s → done ~4.0s)
-  t=4.2s   output block 2 appears  (6 lines, each 120ms apart)
-  t=5.6s   prompt 3 appears
-  t=6.1s   "eza --icons projects/" types  (22 chars × 65ms → done ~7.5s)
-  t=7.8s   output block 3 appears  (6 lines, each 100ms apart)
-  t=9.5s   prompt 4 (final) + blinking cursor
-  total loop: 12s
-  ═══════════════════════════════════════════════════════════════
-  -->
-
-  <!-- ── FONT SIZE & LINE HEIGHT ──
-       font-size: 13px, line-height: 22px
-       p10k prompt seg heights: 22px tall, content starts at y baseline
-  -->
-
-  <!-- ════════════════════════════════════════════
-       PROMPT HELPER — rendered as colored segments
-       Segment 1:  bg=#3d59a1  " ~/  "  (dir)
-       Arrow:       #3d59a1 → #1a1b26  (powerline \uE0B0)
-       Segment 2:  bg=#41a6b5  " main "  (git branch, icon \uE0A0)
-       Arrow:       #41a6b5 → #1a1b26
-       Then:  ❯  in green
-       ════════════════════════════════════════════ -->
-
-  <!-- ── PROMPT MACRO (reusable via <use>) ──
-       We'll just paste it 4 times at different Y positions.
-       Each prompt group is a <g> with SMIL opacity animation.
-  -->
-
-  <!-- ══ LINE 1: PROMPT 1 ══ -->
+  <!-- ── PROMPT 1  (row 0, y=58) ── -->
   <g opacity="0">
     <animate attributeName="opacity" from="0" to="1"
-             begin="0s" dur="0.01s" fill="freeze"/>
-    <!-- dir segment bg -->
-    <rect x="16" y="54" width="58" height="22" rx="3" fill="#3d59a1"/>
-    <!-- dir text -->
-    <text x="24" y="70" font-size="13" fill="#c0caf5"> ~/</text>
-    <!-- powerline arrow dir→bg -->
-    <text x="72" y="70" font-size="22" fill="#3d59a1" textLength="12">&#xE0B0;</text>
-    <!-- git segment bg -->
-    <rect x="84" y="54" width="72" height="22" rx="3" fill="#41a6b5"/>
-    <!-- git icon + branch -->
-    <text x="92" y="70" font-size="13" fill="#1a1b26"> &#xE0A0; main</text>
-    <!-- powerline arrow git→bg -->
-    <text x="154" y="70" font-size="22" fill="#41a6b5" textLength="12">&#xE0B0;</text>
-    <!-- zsh prompt char -->
-    <text x="172" y="70" font-size="13" fill="#9ece6a">❯</text>
+             begin="0.0s" dur="0.01s" fill="freeze"/>
+    <!-- ~/  in blue -->
+    <text x="20" y="58" fill="#7aa2f7"> ~/</text>
+    <!-- ⎇ main  in teal -->
+    <text x="44" y="58" fill="#73daca">  ⎇ main</text>
+    <!-- ❯ in green -->
+    <text x="124" y="58" fill="#9ece6a">  ❯</text>
   </g>
 
-  <!-- ══ "whoami" typed ══ -->
-  <!-- char 1 "w" -->
-  <text x="188" y="70" font-size="13" fill="#c0caf5" opacity="0">w
-    <animate attributeName="opacity" from="0" to="1"
-             begin="0.50s" dur="0.01s" fill="freeze"/>
-  </text>
-  <!-- char 2 "h" -->
-  <text x="196" y="70" font-size="13" fill="#c0caf5" opacity="0">h
-    <animate attributeName="opacity" from="0" to="1"
-             begin="0.58s" dur="0.01s" fill="freeze"/>
-  </text>
-  <!-- char 3 "o" -->
-  <text x="204" y="70" font-size="13" fill="#c0caf5" opacity="0">o
-    <animate attributeName="opacity" from="0" to="1"
-             begin="0.66s" dur="0.01s" fill="freeze"/>
-  </text>
-  <!-- char 4 "a" -->
-  <text x="212" y="70" font-size="13" fill="#c0caf5" opacity="0">a
-    <animate attributeName="opacity" from="0" to="1"
-             begin="0.74s" dur="0.01s" fill="freeze"/>
-  </text>
-  <!-- char 5 "m" -->
-  <text x="220" y="70" font-size="13" fill="#c0caf5" opacity="0">m
-    <animate attributeName="opacity" from="0" to="1"
-             begin="0.82s" dur="0.01s" fill="freeze"/>
-  </text>
-  <!-- char 6 "i" -->
-  <text x="228" y="70" font-size="13" fill="#c0caf5" opacity="0">i
-    <animate attributeName="opacity" from="0" to="1"
-             begin="0.90s" dur="0.01s" fill="freeze"/>
-  </text>
+  <!-- ── "neofetch" typed  (starts col 15, x=140, y=58) ── -->
+  <text x="140" y="58" fill="#cdd6f4" opacity="0">n<animate attributeName="opacity" from="0" to="1" begin="0.40s" dur="0.01s" fill="freeze"/></text>
+  <text x="148" y="58" fill="#cdd6f4" opacity="0">e<animate attributeName="opacity" from="0" to="1" begin="0.48s" dur="0.01s" fill="freeze"/></text>
+  <text x="156" y="58" fill="#cdd6f4" opacity="0">o<animate attributeName="opacity" from="0" to="1" begin="0.56s" dur="0.01s" fill="freeze"/></text>
+  <text x="164" y="58" fill="#cdd6f4" opacity="0">f<animate attributeName="opacity" from="0" to="1" begin="0.64s" dur="0.01s" fill="freeze"/></text>
+  <text x="172" y="58" fill="#cdd6f4" opacity="0">e<animate attributeName="opacity" from="0" to="1" begin="0.72s" dur="0.01s" fill="freeze"/></text>
+  <text x="180" y="58" fill="#cdd6f4" opacity="0">t<animate attributeName="opacity" from="0" to="1" begin="0.80s" dur="0.01s" fill="freeze"/></text>
+  <text x="188" y="58" fill="#cdd6f4" opacity="0">c<animate attributeName="opacity" from="0" to="1" begin="0.88s" dur="0.01s" fill="freeze"/></text>
+  <text x="196" y="58" fill="#cdd6f4" opacity="0">h<animate attributeName="opacity" from="0" to="1" begin="0.96s" dur="0.01s" fill="freeze"/></text>
 
-  <!-- typing cursor on prompt 1 line — hides when output appears -->
-  <rect x="236" y="56" width="8" height="15" rx="1" fill="#9ece6a" opacity="0">
-    <animate attributeName="opacity" from="0" to="1"
-             begin="0.50s" dur="0.01s" fill="freeze"/>
-    <animate attributeName="opacity" from="1" to="0"
-             begin="1.25s" dur="0.01s" fill="freeze"/>
+  <!-- typing cursor line 1 -->
+  <rect x="204" y="44" width="7" height="14" rx="1" fill="#9ece6a" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="0.40s" dur="0.01s" fill="freeze"/>
+    <animate attributeName="opacity" from="1" to="0" begin="1.15s" dur="0.01s" fill="freeze"/>
   </rect>
 
-  <!-- ══ OUTPUT BLOCK 1: whoami ══ -->
+  <!-- ══════════════════════════════════════════
+       NEOFETCH OUTPUT  (rows 1–9)
+       appears all at once at t=1.2s
+  ══════════════════════════════════════════ -->
   <g opacity="0">
     <animate attributeName="opacity" from="0" to="1"
-             begin="1.30s" dur="0.01s" fill="freeze"/>
-    <text x="16" y="104" font-size="13">
-      <tspan fill="#565f89">──</tspan>
-      <tspan fill="#7aa2f7"> Prashant Koirala</tspan>
-      <tspan fill="#565f89">  ·  </tspan>
-      <tspan fill="#9ece6a">Kathmandu, Nepal 🇳🇵</tspan>
+             begin="1.20s" dur="0.01s" fill="freeze"/>
+
+    <!-- row 1: blank — skip -->
+
+    <!-- row 2: top border  y=98 -->
+    <text x="20" y="98" fill="#3b4261">╭──────────────────────────────────────────────────────────────────────────╮</text>
+
+    <!-- row 3: username + OS  y=118 -->
+    <text x="20" y="118">
+      <tspan fill="#3b4261">│  </tspan>
+      <tspan fill="#7aa2f7" font-weight="bold">prashantkoirala465</tspan>
+      <tspan fill="#444b6a">@github</tspan>
+      <tspan fill="#3b4261">          </tspan>
+      <tspan fill="#565f89">OS </tspan>
+      <tspan fill="#cdd6f4">macOS Sequoia (ARM)</tspan>
+      <tspan fill="#3b4261">       │</tspan>
     </text>
-    <text x="16" y="122" font-size="13">
-      <tspan fill="#565f89">  web   </tspan>
-      <tspan fill="#73daca">prashantkoirala.info.np</tspan>
+
+    <!-- row 4: separator + WM  y=138 -->
+    <text x="20" y="138">
+      <tspan fill="#3b4261">│  </tspan>
+      <tspan fill="#444b6a">──────────────────────────</tspan>
+      <tspan fill="#3b4261">          </tspan>
+      <tspan fill="#565f89">WM </tspan>
+      <tspan fill="#cdd6f4">AeroSpace</tspan>
+      <tspan fill="#3b4261">                  │</tspan>
     </text>
-    <text x="16" y="140" font-size="13">
-      <tspan fill="#565f89">  focus </tspan>
-      <tspan fill="#ff9e64">AlgoLab</tspan>
-      <tspan fill="#565f89">  — making DSA actually learnable</tspan>
+
+    <!-- row 5: blank left + bar  y=158 -->
+    <text x="20" y="158">
+      <tspan fill="#3b4261">│                                    </tspan>
+      <tspan fill="#565f89">Bar    </tspan>
+      <tspan fill="#cdd6f4">SketchyBar</tspan>
+      <tspan fill="#3b4261">               │</tspan>
     </text>
+
+    <!-- row 6: blank left + editor  y=178 -->
+    <text x="20" y="178">
+      <tspan fill="#3b4261">│                                    </tspan>
+      <tspan fill="#565f89">Editor </tspan>
+      <tspan fill="#cdd6f4">Neovim</tspan>
+      <tspan fill="#3b4261">                  │</tspan>
+    </text>
+
+    <!-- row 7: blank left + shell  y=198 -->
+    <text x="20" y="198">
+      <tspan fill="#3b4261">│                                    </tspan>
+      <tspan fill="#565f89">Shell  </tspan>
+      <tspan fill="#cdd6f4">zsh</tspan>
+      <tspan fill="#3b4261">                     │</tspan>
+    </text>
+
+    <!-- row 8: blank left + term  y=218 -->
+    <text x="20" y="218">
+      <tspan fill="#3b4261">│                                    </tspan>
+      <tspan fill="#565f89">Term   </tspan>
+      <tspan fill="#cdd6f4">WezTerm</tspan>
+      <tspan fill="#3b4261">                  │</tspan>
+    </text>
+
+    <!-- row 9: bottom border  y=238 -->
+    <text x="20" y="238" fill="#3b4261">╰──────────────────────────────────────────────────────────────────────────╯</text>
+
   </g>
 
-  <!-- ══ LINE 2: PROMPT 2 ══ -->
+  <!-- ── PROMPT 2  (row 10, y=258) ── -->
   <g opacity="0">
     <animate attributeName="opacity" from="0" to="1"
-             begin="2.50s" dur="0.01s" fill="freeze"/>
-    <rect x="16" y="158" width="58" height="22" rx="3" fill="#3d59a1"/>
-    <text x="24" y="174" font-size="13" fill="#c0caf5"> ~/</text>
-    <text x="72" y="174" font-size="22" fill="#3d59a1" textLength="12">&#xE0B0;</text>
-    <rect x="84" y="158" width="72" height="22" rx="3" fill="#41a6b5"/>
-    <text x="92" y="174" font-size="13" fill="#1a1b26"> &#xE0A0; main</text>
-    <text x="154" y="174" font-size="22" fill="#41a6b5" textLength="12">&#xE0B0;</text>
-    <text x="172" y="174" font-size="13" fill="#9ece6a">❯</text>
+             begin="2.80s" dur="0.01s" fill="freeze"/>
+    <text x="20" y="258" fill="#7aa2f7"> ~/</text>
+    <text x="44" y="258" fill="#73daca">  ⎇ main</text>
+    <text x="124" y="258" fill="#9ece6a">  ❯</text>
   </g>
 
-  <!-- ══ "cat about.txt" typed ══ -->
-  <text x="188" y="174" font-size="13" fill="#c0caf5" opacity="0">c<animate attributeName="opacity" from="0" to="1" begin="3.00s" dur="0.01s" fill="freeze"/></text>
-  <text x="196" y="174" font-size="13" fill="#c0caf5" opacity="0">a<animate attributeName="opacity" from="0" to="1" begin="3.07s" dur="0.01s" fill="freeze"/></text>
-  <text x="204" y="174" font-size="13" fill="#c0caf5" opacity="0">t<animate attributeName="opacity" from="0" to="1" begin="3.14s" dur="0.01s" fill="freeze"/></text>
-  <text x="212" y="174" font-size="13" fill="#c0caf5" opacity="0"> <animate attributeName="opacity" from="0" to="1" begin="3.21s" dur="0.01s" fill="freeze"/></text>
-  <text x="220" y="174" font-size="13" fill="#c0caf5" opacity="0">a<animate attributeName="opacity" from="0" to="1" begin="3.28s" dur="0.01s" fill="freeze"/></text>
-  <text x="228" y="174" font-size="13" fill="#c0caf5" opacity="0">b<animate attributeName="opacity" from="0" to="1" begin="3.35s" dur="0.01s" fill="freeze"/></text>
-  <text x="236" y="174" font-size="13" fill="#c0caf5" opacity="0">o<animate attributeName="opacity" from="0" to="1" begin="3.42s" dur="0.01s" fill="freeze"/></text>
-  <text x="244" y="174" font-size="13" fill="#c0caf5" opacity="0">u<animate attributeName="opacity" from="0" to="1" begin="3.49s" dur="0.01s" fill="freeze"/></text>
-  <text x="252" y="174" font-size="13" fill="#c0caf5" opacity="0">t<animate attributeName="opacity" from="0" to="1" begin="3.56s" dur="0.01s" fill="freeze"/></text>
-  <text x="260" y="174" font-size="13" fill="#c0caf5" opacity="0">.<animate attributeName="opacity" from="0" to="1" begin="3.63s" dur="0.01s" fill="freeze"/></text>
-  <text x="268" y="174" font-size="13" fill="#c0caf5" opacity="0">t<animate attributeName="opacity" from="0" to="1" begin="3.70s" dur="0.01s" fill="freeze"/></text>
-  <text x="276" y="174" font-size="13" fill="#c0caf5" opacity="0">x<animate attributeName="opacity" from="0" to="1" begin="3.77s" dur="0.01s" fill="freeze"/></text>
-  <text x="284" y="174" font-size="13" fill="#c0caf5" opacity="0">t<animate attributeName="opacity" from="0" to="1" begin="3.84s" dur="0.01s" fill="freeze"/></text>
+  <!-- ── "eza --long" typed  (x=140, y=258) ── -->
+  <text x="140" y="258" fill="#cdd6f4" opacity="0">e<animate attributeName="opacity" from="0" to="1" begin="3.20s" dur="0.01s" fill="freeze"/></text>
+  <text x="148" y="258" fill="#cdd6f4" opacity="0">z<animate attributeName="opacity" from="0" to="1" begin="3.27s" dur="0.01s" fill="freeze"/></text>
+  <text x="156" y="258" fill="#cdd6f4" opacity="0">a<animate attributeName="opacity" from="0" to="1" begin="3.34s" dur="0.01s" fill="freeze"/></text>
+  <text x="164" y="258" fill="#cdd6f4" opacity="0"> <animate attributeName="opacity" from="0" to="1" begin="3.41s" dur="0.01s" fill="freeze"/></text>
+  <text x="172" y="258" fill="#9ece6a" opacity="0">-<animate attributeName="opacity" from="0" to="1" begin="3.48s" dur="0.01s" fill="freeze"/></text>
+  <text x="180" y="258" fill="#9ece6a" opacity="0">-<animate attributeName="opacity" from="0" to="1" begin="3.55s" dur="0.01s" fill="freeze"/></text>
+  <text x="188" y="258" fill="#9ece6a" opacity="0">l<animate attributeName="opacity" from="0" to="1" begin="3.62s" dur="0.01s" fill="freeze"/></text>
+  <text x="196" y="258" fill="#9ece6a" opacity="0">o<animate attributeName="opacity" from="0" to="1" begin="3.69s" dur="0.01s" fill="freeze"/></text>
+  <text x="204" y="258" fill="#9ece6a" opacity="0">n<animate attributeName="opacity" from="0" to="1" begin="3.76s" dur="0.01s" fill="freeze"/></text>
+  <text x="212" y="258" fill="#9ece6a" opacity="0">g<animate attributeName="opacity" from="0" to="1" begin="3.83s" dur="0.01s" fill="freeze"/></text>
 
-  <!-- typing cursor on prompt 2 line -->
-  <rect x="292" y="160" width="8" height="15" rx="1" fill="#9ece6a" opacity="0">
-    <animate attributeName="opacity" from="0" to="1" begin="3.00s" dur="0.01s" fill="freeze"/>
-    <animate attributeName="opacity" from="1" to="0" begin="4.15s" dur="0.01s" fill="freeze"/>
+  <!-- typing cursor line 2 -->
+  <rect x="220" y="244" width="7" height="14" rx="1" fill="#9ece6a" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="3.20s" dur="0.01s" fill="freeze"/>
+    <animate attributeName="opacity" from="1" to="0" begin="4.05s" dur="0.01s" fill="freeze"/>
   </rect>
 
-  <!-- ══ OUTPUT BLOCK 2: about.txt ══ -->
+  <!-- ══════════════════════════════════════════
+       EZA OUTPUT  (rows 11–18)
+       appears all at once at t=4.1s
+  ══════════════════════════════════════════ -->
   <g opacity="0">
     <animate attributeName="opacity" from="0" to="1"
-             begin="4.20s" dur="0.01s" fill="freeze"/>
-    <text x="16" y="210" font-size="13">
-      <tspan fill="#7aa2f7">  os      </tspan><tspan fill="#a9b1d6">macOS Sequoia  </tspan>
-      <tspan fill="#565f89">·  </tspan>
-      <tspan fill="#7aa2f7">wm   </tspan><tspan fill="#a9b1d6">AeroSpace</tspan>
+             begin="4.10s" dur="0.01s" fill="freeze"/>
+
+    <!-- header row  y=278 -->
+    <text x="20" y="278">
+      <tspan fill="#444b6a">Permissions  Size  Date Modified  Name</tspan>
     </text>
-    <text x="16" y="228" font-size="13">
-      <tspan fill="#7aa2f7">  bar     </tspan><tspan fill="#a9b1d6">SketchyBar  </tspan>
-      <tspan fill="#565f89">·  </tspan>
-      <tspan fill="#7aa2f7">term </tspan><tspan fill="#a9b1d6">WezTerm</tspan>
+
+    <!-- Singularity  y=298 -->
+    <text x="20" y="298">
+      <tspan fill="#565f89">drwxr-xr-x     -  </tspan>
+      <tspan fill="#444b6a">Mar  7 2025  </tspan>
+      <tspan fill="#7aa2f7">Singularity</tspan>
+      <tspan fill="#444b6a">         Three.js · WebGPU · GLSL</tspan>
     </text>
-    <text x="16" y="246" font-size="13">
-      <tspan fill="#7aa2f7">  editor  </tspan><tspan fill="#a9b1d6">Neovim  </tspan>
-      <tspan fill="#565f89">·  </tspan>
-      <tspan fill="#7aa2f7">shell</tspan><tspan fill="#a9b1d6">  zsh</tspan>
+
+    <!-- AlgoLab  y=318 -->
+    <text x="20" y="318">
+      <tspan fill="#565f89">drwxr-xr-x     -  </tspan>
+      <tspan fill="#444b6a">Mar  7 2025  </tspan>
+      <tspan fill="#7aa2f7">AlgoLab</tspan>
+      <tspan fill="#9ece6a">             [active]</tspan>
+      <tspan fill="#444b6a">     TypeScript</tspan>
     </text>
-    <text x="16" y="264" font-size="13">
-      <tspan fill="#7aa2f7">  loves   </tspan>
-      <tspan fill="#bb9af7">systems  </tspan>
-      <tspan fill="#9ece6a">graphics  </tspan>
-      <tspan fill="#ff9e64">TUIs  </tspan>
-      <tspan fill="#73daca">IoT  </tspan>
-      <tspan fill="#f7768e">GLSL</tspan>
+
+    <!-- Sign2Text  y=338 -->
+    <text x="20" y="338">
+      <tspan fill="#565f89">drwxr-xr-x     -  </tspan>
+      <tspan fill="#444b6a">Feb 28 2025  </tspan>
+      <tspan fill="#7aa2f7">Sign2Text</tspan>
+      <tspan fill="#444b6a">            Python · CV · JS</tspan>
     </text>
+
+    <!-- BusTracker  y=358 -->
+    <text x="20" y="358">
+      <tspan fill="#565f89">drwxr-xr-x     -  </tspan>
+      <tspan fill="#444b6a">Feb 14 2025  </tspan>
+      <tspan fill="#7aa2f7">BusTracker</tspan>
+      <tspan fill="#444b6a">          C++ · Arduino · ESP8266</tspan>
+    </text>
+
+    <!-- web-portfolio  y=378 -->
+    <text x="20" y="378">
+      <tspan fill="#565f89">drwxr-xr-x     -  </tspan>
+      <tspan fill="#444b6a">Jan 30 2025  </tspan>
+      <tspan fill="#7aa2f7">web-portfolio</tspan>
+      <tspan fill="#e0af68">        ★ 54</tspan>
+      <tspan fill="#444b6a">     GSAP · Lenis</tspan>
+    </text>
+
+    <!-- ASCII-Art-Generator  y=398 -->
+    <text x="20" y="398">
+      <tspan fill="#565f89">drwxr-xr-x     -  </tspan>
+      <tspan fill="#444b6a">Jan 12 2025  </tspan>
+      <tspan fill="#7aa2f7">ASCII-Art-Generator</tspan>
+      <tspan fill="#444b6a">  Rust · Cargo · CLI</tspan>
+    </text>
+
   </g>
 
-  <!-- ══ LINE 3: PROMPT 3 ══ -->
+  <!-- ── PROMPT 3 / FINAL  (row 20, y=438) ── -->
   <g opacity="0">
     <animate attributeName="opacity" from="0" to="1"
-             begin="5.60s" dur="0.01s" fill="freeze"/>
-    <rect x="16" y="282" width="58" height="22" rx="3" fill="#3d59a1"/>
-    <text x="24" y="298" font-size="13" fill="#c0caf5"> ~/</text>
-    <text x="72" y="298" font-size="22" fill="#3d59a1" textLength="12">&#xE0B0;</text>
-    <rect x="84" y="282" width="72" height="22" rx="3" fill="#41a6b5"/>
-    <text x="92" y="298" font-size="13" fill="#1a1b26"> &#xE0A0; main</text>
-    <text x="154" y="298" font-size="22" fill="#41a6b5" textLength="12">&#xE0B0;</text>
-    <text x="172" y="298" font-size="13" fill="#9ece6a">❯</text>
-  </g>
-
-  <!-- ══ "eza --icons projects/" typed ══ -->
-  <text x="188" y="298" font-size="13" fill="#c0caf5" opacity="0">e<animate attributeName="opacity" from="0" to="1" begin="6.10s" dur="0.01s" fill="freeze"/></text>
-  <text x="196" y="298" font-size="13" fill="#c0caf5" opacity="0">z<animate attributeName="opacity" from="0" to="1" begin="6.17s" dur="0.01s" fill="freeze"/></text>
-  <text x="204" y="298" font-size="13" fill="#c0caf5" opacity="0">a<animate attributeName="opacity" from="0" to="1" begin="6.24s" dur="0.01s" fill="freeze"/></text>
-  <text x="212" y="298" font-size="13" fill="#c0caf5" opacity="0"> <animate attributeName="opacity" from="0" to="1" begin="6.31s" dur="0.01s" fill="freeze"/></text>
-  <text x="220" y="298" font-size="13" fill="#9ece6a" opacity="0">-<animate attributeName="opacity" from="0" to="1" begin="6.38s" dur="0.01s" fill="freeze"/></text>
-  <text x="228" y="298" font-size="13" fill="#9ece6a" opacity="0">-<animate attributeName="opacity" from="0" to="1" begin="6.45s" dur="0.01s" fill="freeze"/></text>
-  <text x="236" y="298" font-size="13" fill="#9ece6a" opacity="0">i<animate attributeName="opacity" from="0" to="1" begin="6.52s" dur="0.01s" fill="freeze"/></text>
-  <text x="244" y="298" font-size="13" fill="#9ece6a" opacity="0">c<animate attributeName="opacity" from="0" to="1" begin="6.59s" dur="0.01s" fill="freeze"/></text>
-  <text x="252" y="298" font-size="13" fill="#9ece6a" opacity="0">o<animate attributeName="opacity" from="0" to="1" begin="6.66s" dur="0.01s" fill="freeze"/></text>
-  <text x="260" y="298" font-size="13" fill="#9ece6a" opacity="0">n<animate attributeName="opacity" from="0" to="1" begin="6.73s" dur="0.01s" fill="freeze"/></text>
-  <text x="268" y="298" font-size="13" fill="#9ece6a" opacity="0">s<animate attributeName="opacity" from="0" to="1" begin="6.80s" dur="0.01s" fill="freeze"/></text>
-  <text x="276" y="298" font-size="13" fill="#c0caf5" opacity="0"> <animate attributeName="opacity" from="0" to="1" begin="6.87s" dur="0.01s" fill="freeze"/></text>
-  <text x="284" y="298" font-size="13" fill="#ff9e64" opacity="0">p<animate attributeName="opacity" from="0" to="1" begin="6.94s" dur="0.01s" fill="freeze"/></text>
-  <text x="292" y="298" font-size="13" fill="#ff9e64" opacity="0">r<animate attributeName="opacity" from="0" to="1" begin="7.01s" dur="0.01s" fill="freeze"/></text>
-  <text x="300" y="298" font-size="13" fill="#ff9e64" opacity="0">o<animate attributeName="opacity" from="0" to="1" begin="7.08s" dur="0.01s" fill="freeze"/></text>
-  <text x="308" y="298" font-size="13" fill="#ff9e64" opacity="0">j<animate attributeName="opacity" from="0" to="1" begin="7.15s" dur="0.01s" fill="freeze"/></text>
-  <text x="316" y="298" font-size="13" fill="#ff9e64" opacity="0">e<animate attributeName="opacity" from="0" to="1" begin="7.22s" dur="0.01s" fill="freeze"/></text>
-  <text x="324" y="298" font-size="13" fill="#ff9e64" opacity="0">c<animate attributeName="opacity" from="0" to="1" begin="7.29s" dur="0.01s" fill="freeze"/></text>
-  <text x="332" y="298" font-size="13" fill="#ff9e64" opacity="0">t<animate attributeName="opacity" from="0" to="1" begin="7.36s" dur="0.01s" fill="freeze"/></text>
-  <text x="340" y="298" font-size="13" fill="#ff9e64" opacity="0">s<animate attributeName="opacity" from="0" to="1" begin="7.43s" dur="0.01s" fill="freeze"/></text>
-  <text x="348" y="298" font-size="13" fill="#ff9e64" opacity="0">/<animate attributeName="opacity" from="0" to="1" begin="7.50s" dur="0.01s" fill="freeze"/></text>
-
-  <!-- typing cursor on prompt 3 line -->
-  <rect x="356" y="284" width="8" height="15" rx="1" fill="#9ece6a" opacity="0">
-    <animate attributeName="opacity" from="0" to="1" begin="6.10s" dur="0.01s" fill="freeze"/>
-    <animate attributeName="opacity" from="1" to="0" begin="7.75s" dur="0.01s" fill="freeze"/>
-  </rect>
-
-  <!-- ══ OUTPUT BLOCK 3: eza projects ══ -->
-  <g opacity="0">
-    <animate attributeName="opacity" from="0" to="1"
-             begin="7.80s" dur="0.01s" fill="freeze"/>
-    <!-- eza-style: colored icons + name + dim meta -->
-    <text x="16" y="330" font-size="13">
-      <tspan fill="#f7768e">📁 </tspan>
-      <tspan fill="#7aa2f7">Singularity          </tspan>
-      <tspan fill="#565f89">Three.js · WebGPU · GLSL</tspan>
-    </text>
-    <text x="16" y="348" font-size="13">
-      <tspan fill="#f7768e">📁 </tspan>
-      <tspan fill="#7aa2f7">AlgoLab              </tspan>
-      <tspan fill="#565f89">TypeScript · </tspan>
-      <tspan fill="#9ece6a">[active]</tspan>
-    </text>
-    <text x="16" y="366" font-size="13">
-      <tspan fill="#f7768e">📁 </tspan>
-      <tspan fill="#7aa2f7">Sign2Text             </tspan>
-      <tspan fill="#565f89">Python · CV · JavaScript</tspan>
-    </text>
-    <text x="16" y="384" font-size="13">
-      <tspan fill="#f7768e">📁 </tspan>
-      <tspan fill="#7aa2f7">BusTracker            </tspan>
-      <tspan fill="#565f89">C++ · Arduino · ESP8266</tspan>
-    </text>
-    <text x="16" y="402" font-size="13">
-      <tspan fill="#f7768e">📁 </tspan>
-      <tspan fill="#7aa2f7">web-portfolio         </tspan>
-      <tspan fill="#565f89">GSAP · Lenis · </tspan>
-      <tspan fill="#e0af68">⭐ 54</tspan>
-    </text>
-    <text x="16" y="420" font-size="13">
-      <tspan fill="#f7768e">📁 </tspan>
-      <tspan fill="#7aa2f7">ASCII-Art-Generator   </tspan>
-      <tspan fill="#565f89">Rust · Cargo · CLI</tspan>
-    </text>
-  </g>
-
-  <!-- ══ LINE 4: FINAL PROMPT + blinking cursor ══ -->
-  <g opacity="0">
-    <animate attributeName="opacity" from="0" to="1"
-             begin="9.50s" dur="0.01s" fill="freeze"/>
-    <rect x="16" y="438" width="58" height="22" rx="3" fill="#3d59a1"/>
-    <text x="24" y="454" font-size="13" fill="#c0caf5"> ~/</text>
-    <text x="72" y="454" font-size="22" fill="#3d59a1" textLength="12">&#xE0B0;</text>
-    <rect x="84" y="438" width="72" height="22" rx="3" fill="#41a6b5"/>
-    <text x="92" y="454" font-size="13" fill="#1a1b26"> &#xE0A0; main</text>
-    <text x="154" y="454" font-size="22" fill="#41a6b5" textLength="12">&#xE0B0;</text>
-    <text x="172" y="454" font-size="13" fill="#9ece6a">❯</text>
-    <!-- blinking cursor -->
-    <rect x="188" y="440" width="8" height="15" rx="1" fill="#9ece6a">
-      <animate attributeName="opacity" values="1;0;1" dur="1s"
-               begin="9.50s" repeatCount="indefinite"/>
+             begin="5.50s" dur="0.01s" fill="freeze"/>
+    <text x="20" y="438" fill="#7aa2f7"> ~/</text>
+    <text x="44" y="438" fill="#73daca">  ⎇ main</text>
+    <text x="124" y="438" fill="#9ece6a">  ❯</text>
+    <!-- blinking block cursor -->
+    <rect x="140" y="424" width="7" height="14" rx="1" fill="#9ece6a">
+      <animate attributeName="opacity" values="1;0;1" dur="1.0s"
+               begin="5.50s" repeatCount="indefinite"/>
     </rect>
   </g>
 
