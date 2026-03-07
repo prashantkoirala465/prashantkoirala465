@@ -9,19 +9,19 @@
     </clipPath>
 
     <clipPath id="clip2">
-      <rect x="246" y="118" width="0" height="18">
+      <rect x="246" y="140" width="0" height="18">
         <animate attributeName="width" from="0" to="514" begin="2.0s" dur="0.7s" fill="freeze"/>
       </rect>
     </clipPath>
 
     <clipPath id="clip3">
-      <rect x="246" y="250" width="0" height="18">
+      <rect x="246" y="274" width="0" height="18">
         <animate attributeName="width" from="0" to="514" begin="4.0s" dur="0.7s" fill="freeze"/>
       </rect>
     </clipPath>
 
     <clipPath id="clip4">
-      <rect x="246" y="382" width="0" height="18">
+      <rect x="246" y="406" width="0" height="18">
         <animate attributeName="width" from="0" to="514" begin="6.2s" dur="0.8s" fill="freeze"/>
       </rect>
     </clipPath>
