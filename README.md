@@ -1,189 +1,127 @@
-<!-- TYPING SVG HERO -->
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=13&duration=1800&pause=400&color=00FF41&background=0D111700&center=true&vCenter=true&multiline=true&repeat=false&width=600&height=110&lines=prashantkoirala465%3A~%24+cat+.%2Fabout;+;Prashant+Koirala+%E2%80%94+Developer+%2F+Builder+%2F+Kathmandu%2C+Nepal;I+build+things.+Then+I+make+them+look+good." alt="Typing SVG" />
-</p>
+```
+prashantkoirala465:~$ cat ./about
 
-<!-- SCANLINE DIVIDER -->
-<img src="https://i.imgur.com/dBaSKWF.gif" height="20" width="100%">
+  Prashant Koirala — Developer / Builder / Kathmandu, Nepal
+  I build things. Then I make them look good.
 
-<!-- BOOT SEQUENCE BLOCK -->
-```ansi
-[0;32m prashantkoirala465:~$ [0msysteminfo
+prashantkoirala465:~$ systeminfo
 
-  OS       macOS Sequoia  (ARM)
-  WM       AeroSpace  —  tiling, no nonsense
-  Bar      SketchyBar  —  built from scratch
-  Editor   Neovim  —  configured, not themed
-  Shell    zsh  +  custom prompt
+  OS       macOS Sequoia (ARM)
+  WM       AeroSpace     — tiling, no nonsense
+  Bar      SketchyBar    — built from scratch
+  Editor   Neovim        — configured, not themed
+  Shell    zsh + custom prompt
   Term     WezTerm
 
-[0;32m prashantkoirala465:~$ [0mcat .status
+prashantkoirala465:~$ cat .status
 
   Status:    Focusing
-  Location:  Kathmandu, Nepal 🇳🇵
+  Location:  Kathmandu, Nepal
   Website:   prashantkoirala.info.np
-  Currently: AlgoLab — making DSA actually learnable
-
-[0;32m prashantkoirala465:~$ [0m_
+  Building:  AlgoLab — making DSA actually learnable
 ```
 
-<!-- SCANLINE DIVIDER -->
-<img src="https://i.imgur.com/dBaSKWF.gif" height="20" width="100%">
+---
 
-<!-- PROJECTS SECTION -->
-```ansi
-[0;32m prashantkoirala465:~$ [0m./projects --list --sort=interesting
-```
+## Projects
 
-<br/>
-
-<table border="0" cellspacing="0" cellpadding="10" width="100%">
+<table border="0" cellspacing="0" cellpadding="12" width="100%">
 <tr>
 <td width="50%" valign="top">
 
-```
-▸ Singularity
-  Real-time 3D black hole in the browser.
-  Gravitational lensing + accretion disk
-  written in GLSL shaders from scratch.
+**[Singularity](https://github.com/prashantkoirala465/Singularity)**
+Real-time 3D black hole in the browser.
+Gravitational lensing + accretion disk written in GLSL shaders from scratch.
 
-  Three.js · WebGPU · GLSL
-```
+`Three.js` `WebGPU` `GLSL`
 
 </td>
 <td width="50%" valign="top">
 
-```
-▸ AlgoLab                      [active]
-  Visual, interactive DSA.
-  Step-through sorting, graphs, trees, DP.
-  Code + quiz alongside every animation.
+**[AlgoLab](https://github.com/prashantkoirala465/AlgoLab)** `active`
+Visual, interactive DSA.
+Step-through sorting, graphs, trees, DP — code and quizzes alongside every animation.
 
-  TypeScript · MIT
-```
+`TypeScript` `MIT`
 
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
 
-```
-▸ Sign2Text
-  Nepali Sign Language → Text.
-  Real-time CV + ML pipeline,
-  built at a hackathon.
+**[Sign2Text](https://github.com/prashantkoirala465/Sign2Text-Nepali-Sign-Language-to-Text-Translation)**
+Nepali Sign Language → Text.
+Real-time CV + ML pipeline, built at a hackathon.
 
-  Python · Computer Vision · JS
-```
+`Python` `Computer Vision` `JavaScript`
 
 </td>
 <td width="50%" valign="top">
 
-```
-▸ Public Bus Live Tracker
-  GPS tracking for Kathmandu buses.
-  Real hardware: ESP8266 + NEO-7M.
-  Not a simulation.
+**[Public Bus Live Tracker](https://github.com/prashantkoirala465/Public-Bus-Live-Tracking-System)**
+GPS tracking for Kathmandu buses.
+Real hardware: ESP8266 + NEO-7M. Not a simulation.
 
-  C++ · Arduino · ESP8266 · IoT
-```
+`C++` `Arduino` `ESP8266` `IoT`
 
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
 
-```
-▸ Movie Success Predictor
-  150+ years of TMDB data.
-  Random Forest + KNN ensemble.
-  Your gut vs. the model.
+**[Movie Success Predictor](https://github.com/prashantkoirala465/Movie-Success-Predictor)**
+150+ years of TMDB data.
+Random Forest + KNN ensemble — your gut vs. the model.
 
-  Python · Flask · scikit-learn
-```
+`Python` `Flask` `scikit-learn`
 
 </td>
 <td width="50%" valign="top">
 
-```
-▸ ASCII Art Generator (Rust)
-  CLI tool. Renders text as styled
-  ASCII art. Built in Rust because
-  it deserved to be fast.
+**[ASCII Art Generator](https://github.com/prashantkoirala465/ASCII-Art-Generator)**
+CLI tool. Renders text as styled ASCII art.
+Built in Rust because it deserved to be fast.
 
-  Rust · Cargo · CLI
-```
+`Rust` `Cargo` `CLI`
 
 </td>
 </tr>
 </table>
 
-```ansi
-[0;32m prashantkoirala465:~$ [0m_
-```
+---
 
-<!-- SCANLINE DIVIDER -->
-<img src="https://i.imgur.com/dBaSKWF.gif" height="20" width="100%">
-
-<!-- STATS — terminal style -->
-```ansi
-[0;32m prashantkoirala465:~$ [0mneofetch --github
-```
-
-<br/>
+## Stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=prashantkoirala465&show_icons=true&hide_border=true&bg_color=0d1117&title_color=00ff41&text_color=00ff41&icon_color=00ff41&ring_color=00ff41&include_all_commits=true&count_private=true" height="160px" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=prashantkoirala465&layout=compact&hide_border=true&bg_color=0d1117&title_color=00ff41&text_color=00ff41&langs_count=8" height="160px" />
+  <img src="https://github-readme-stats.vercel.app/api?username=prashantkoirala465&show_icons=true&hide_border=true&bg_color=0d1117&title_color=00ff41&text_color=c9d1d9&icon_color=00ff41&ring_color=00ff41&include_all_commits=true&count_private=true" height="160" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=prashantkoirala465&layout=compact&hide_border=true&bg_color=0d1117&title_color=00ff41&text_color=c9d1d9&langs_count=8" height="160" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com?user=prashantkoirala465&theme=dark&hide_border=true&background=0D1117&stroke=00ff41&ring=00ff41&fire=00ff41&currStreakNum=00ff41&sideNums=00ff41&currStreakLabel=00ff41&sideLabels=00ff41&dates=4a4a4a" />
+  <img src="https://github-readme-streak-stats.herokuapp.com?user=prashantkoirala465&theme=dark&hide_border=true&background=0D1117&stroke=00ff41&ring=00ff41&fire=00ff41&currStreakNum=c9d1d9&sideNums=c9d1d9&currStreakLabel=00ff41&sideLabels=00ff41&dates=6e7681" />
 </p>
 
-<!-- METRICS SVG — generated by GitHub Actions daily -->
 <p align="center">
   <img src="https://raw.githubusercontent.com/prashantkoirala465/prashantkoirala465/main/github-metrics.svg" width="100%" />
 </p>
 
-<!-- SCANLINE DIVIDER -->
-<img src="https://i.imgur.com/dBaSKWF.gif" height="20" width="100%">
+---
 
-<!-- SNAKE -->
-```ansi
-[0;32m prashantkoirala465:~$ [0mwatch -n 86400 github-snake --dark
-```
-
-<br/>
+## Activity
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/prashantkoirala465/prashantkoirala465/snake/github-contribution-grid-snake-dark.svg" width="100%" />
 </p>
 
-<!-- ACTIVITY GRAPH -->
 <p align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=prashantkoirala465&theme=react-dark&hide_border=true&color=00ff41&line=00ff41&point=00ff41&bg_color=0d1117" width="100%" />
 </p>
 
-<!-- SCANLINE DIVIDER -->
-<img src="https://i.imgur.com/dBaSKWF.gif" height="20" width="100%">
-
-<!-- FOOTER LINKS -->
-```ansi
-[0;32m prashantkoirala465:~$ [0mcat .links
-```
-
-<br/>
+---
 
 <p align="center">
   <a href="https://prashantkoirala.info.np"><img src="https://img.shields.io/badge/portfolio-prashantkoirala.info.np-00ff41?style=flat-square&labelColor=0d1117&color=00ff41" /></a>&nbsp;
   <a href="https://linkedin.com/in/prashantkoirala"><img src="https://img.shields.io/badge/linkedin-connect-00ff41?style=flat-square&labelColor=0d1117&color=00ff41&logo=linkedin&logoColor=00ff41" /></a>&nbsp;
-  <a href="https://x.com/prashantk465"><img src="https://img.shields.io/badge/x-@prashantk465-00ff41?style=flat-square&labelColor=0d1117&color=00ff41&logo=x&logoColor=00ff41" /></a>&nbsp;
+  <a href="https://x.com/prashantk465"><img src="https://img.shields.io/badge/x-%40prashantk465-00ff41?style=flat-square&labelColor=0d1117&color=00ff41&logo=x&logoColor=00ff41" /></a>&nbsp;
   <img src="https://komarev.com/ghpvc/?username=prashantkoirala465&color=00ff41&style=flat-square&label=visitors" />
-</p>
-
-<br/>
-
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=11&duration=3000&pause=1000&color=00FF4180&background=0D111700&center=true&vCenter=true&width=500&lines=prashantkoirala465%3A~%24+exit;+;Connection+closed." alt="exit" />
 </p>
