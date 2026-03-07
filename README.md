@@ -1,39 +1,65 @@
-<div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0,000000,00ff41&height=120&section=header&fontColor=00ff41&animation=fadeIn" width="100%" />
-</div>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="42%" valign="top">
 
-```javascript
-const prashant = {
-  name:      "Prashant Koirala",
-  location:  "Kathmandu, Nepal 🇳🇵",
-  website:   "prashantkoirala.info.np",
-  status:    "Focusing",
+<pre style="color:#00ff41;background:#0d1117;font-size:0.55em;line-height:1.2;font-family:monospace;">
+                                      
+                                      
+                     .-               
+             .=*###**#%+=-            
+        .=++=%%%%%%%%%%%%%#**.        
+        .+%%%%%%%%%%%%%%%%%%*.        
+     -++%%%%%%%%%*#%%%%%%%%%%+=.      
+      .-%%%%%%%%-:=#%%%%%%%%%#=.      
+       .#*%%#%#-======-===@##=        
+         .=*==+-*#*-..*%===           
+           :=-:.:=:...:-.-:           
+           .=#%*=-:.:::--:            
+          -%%%@@+-=+##%%=             
+         .%%%%%%%*=+%@%%%=            
+        :#%%%%%%%%%%%%@%%%*.          
+       :%%%%%%%%%%%%%%@%%@%*          
+      .%%%%%%%%%%@%%%%%%%%%%+         
+      *%%%%%@%%%%%%%%@%%%%%%%=        
+     .%%%@@@@%%%%%%%%%%%%%%%%#
+</pre>
 
-  os:        "macOS Sequoia (ARM)",
-  wm:        "AeroSpace",      // tiling, no nonsense
-  bar:       "SketchyBar",     // built from scratch
-  editor:    "Neovim",         // configured, not themed
-  shell:     "zsh",
-  terminal:  "WezTerm",
-
-  building:  "AlgoLab",        // making DSA actually learnable
-  interests: ["systems", "graphics", "TUIs", "IoT", "motion design"],
-
-  askMeAbout: [
-    "WebGL / GLSL shaders",
-    "terminal UI design",
-    "embedded systems",
-    "full-stack web",
-    "ML pipelines",
-  ],
-};
-```
+</td>
+<td width="58%" valign="top">
 
 <br/>
 
+```
+prashantkoirala465@github
+─────────────────────────
+OS       macOS Sequoia (ARM)
+WM       AeroSpace
+bar      SketchyBar
+editor   Neovim
+shell    zsh
+term     WezTerm
+─────────────────────────
+location Kathmandu, Nepal
+focus    AlgoLab
+─────────────────────────
+interests
+  systems · graphics · TUIs
+  IoT · motion design · GLSL
+─────────────────────────
+ask me about
+  WebGL / GLSL shaders
+  terminal UI design
+  embedded systems
+  full-stack · ML pipelines
+```
+
+</td>
+</tr>
+</table>
+
 ---
 
-### Projects
+<code>~/projects</code>
 
 <table width="100%" cellspacing="0" cellpadding="0" border="0">
 <tr>
@@ -117,7 +143,7 @@ const prashant = {
 
 ---
 
-### Stats
+<code>~/stats</code>
 
 <div align="center">
 
@@ -133,7 +159,7 @@ const prashant = {
 
 ---
 
-### Activity
+<code>~/activity</code>
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/prashantkoirala465/prashantkoirala465/snake/github-contribution-grid-snake-dark.svg" width="100%" />
@@ -159,8 +185,4 @@ const prashant = {
   </a>
   &nbsp;
   <img src="https://komarev.com/ghpvc/?username=prashantkoirala465&color=00ff41&style=flat-square&label=visitors" />
-</div>
-
-<div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0,00ff41,000000&height=80&section=footer" width="100%" />
 </div>
