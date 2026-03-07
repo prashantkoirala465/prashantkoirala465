@@ -147,7 +147,7 @@
     <text x="124" y="258" fill="#9ece6a">  ❯</text>
   </g>
 
-  <!-- ── "eza --long" typed  (x=140, y=258) ── -->
+  <!-- "eza -long" typed (x=140, y=258) -->
   <text x="140" y="258" fill="#cdd6f4" opacity="0">e<animate attributeName="opacity" from="0" to="1" begin="3.20s" dur="0.01s" fill="freeze"/></text>
   <text x="148" y="258" fill="#cdd6f4" opacity="0">z<animate attributeName="opacity" from="0" to="1" begin="3.27s" dur="0.01s" fill="freeze"/></text>
   <text x="156" y="258" fill="#cdd6f4" opacity="0">a<animate attributeName="opacity" from="0" to="1" begin="3.34s" dur="0.01s" fill="freeze"/></text>
