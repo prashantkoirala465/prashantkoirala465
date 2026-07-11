@@ -89,8 +89,8 @@
 
     <!-- stats line -->
     <text x="20" y="126" font-size="13">
-      <tspan fill="#484f58">  repos: </tspan><tspan fill="#e3b341">37</tspan>
-      <tspan fill="#484f58">   followers: </tspan><tspan fill="#e3b341">22</tspan>
+      <tspan fill="#484f58">  repos: </tspan><tspan fill="#e3b341">51</tspan>
+      <tspan fill="#484f58">   followers: </tspan><tspan fill="#e3b341">43</tspan>
       <tspan fill="#484f58">   hireable: </tspan><tspan fill="#3fb950">true</tspan>
     </text>
   </g>
@@ -132,7 +132,7 @@
     <text x="37" y="174" font-size="13">
       <tspan fill="#58a6ff">web-development-portfolio</tspan><tspan fill="#30363d">/</tspan>
       <tspan fill="#484f58">   </tspan>
-      <tspan fill="#e3b341">★ 54</tspan>
+      <tspan fill="#e3b341">★ 140</tspan>
     </text>
 
     <!-- AlgoLab  TS blue -->
@@ -149,18 +149,20 @@
       <tspan fill="#484f58">   TypeScript</tspan>
     </text>
 
-    <!-- Appointment-Management-System  C# green -->
-    <circle cx="28" cy="223" r="4" fill="#239120"/>
+    <!-- Singularity  JS yellow -->
+    <circle cx="28" cy="223" r="4" fill="#f7df1e"/>
     <text x="37" y="228" font-size="13">
-      <tspan fill="#58a6ff">Appointment-Management-System</tspan><tspan fill="#30363d">/</tspan>
-      <tspan fill="#484f58">   C#</tspan>
+      <tspan fill="#58a6ff">Singularity</tspan><tspan fill="#30363d">/</tspan>
+      <tspan fill="#484f58">   Three.js   </tspan>
+      <tspan fill="#e3b341">★ 4</tspan>
     </text>
 
-    <!-- DCS-403-Assignments-PK  C++ purple -->
-    <circle cx="28" cy="241" r="4" fill="#9c4bdb"/>
+    <!-- Sign2Text  ML/JS -->
+    <circle cx="28" cy="241" r="4" fill="#3572a5"/>
     <text x="37" y="246" font-size="13">
-      <tspan fill="#58a6ff">DCS-403-Assignments-PK</tspan><tspan fill="#30363d">/</tspan>
-      <tspan fill="#484f58">   C++</tspan>
+      <tspan fill="#58a6ff">Sign2Text</tspan><tspan fill="#30363d">/</tspan>
+      <tspan fill="#484f58">   ML + CV   </tspan>
+      <tspan fill="#e3b341">★ 9</tspan>
     </text>
 
     <!-- UI-UX-Project  design blue -->
@@ -168,7 +170,7 @@
     <text x="37" y="264" font-size="13">
       <tspan fill="#58a6ff">UI-UX-Project</tspan><tspan fill="#30363d">/</tspan>
       <tspan fill="#484f58">   Figma   </tspan>
-      <tspan fill="#e3b341">★ 11</tspan>
+      <tspan fill="#e3b341">★ 17</tspan>
     </text>
   </g>
 
@@ -216,9 +218,9 @@
     <circle cx="28" cy="337" r="4" fill="#9c4bdb"/>
     <text x="37" y="342" font-size="13" fill="#e6edf3">C++</text>
 
-    <!-- C#  green -->
-    <circle cx="28" cy="355" r="4" fill="#239120"/>
-    <text x="37" y="360" font-size="13" fill="#e6edf3">C#</text>
+    <!-- Go  cyan -->
+    <circle cx="28" cy="355" r="4" fill="#00add8"/>
+    <text x="37" y="360" font-size="13" fill="#e6edf3">Go</text>
 
     <!-- Python  blue -->
     <circle cx="28" cy="373" r="4" fill="#3572a5"/>
@@ -265,7 +267,7 @@
     </text>
 
     <text x="20" y="456" font-size="13">
-      <tspan fill="#3fb950">  * </tspan><tspan fill="#e3b341">9c4e7d </tspan><tspan fill="#e6edf3">feat: pomodoro timer TUI</tspan>
+      <tspan fill="#3fb950">  * </tspan><tspan fill="#e3b341">9c4e7d </tspan><tspan fill="#e6edf3">feat: gravitational lensing shader </tspan><tspan fill="#39c5cf">(Singularity)</tspan>
     </text>
 
     <text x="20" y="474" font-size="13">
@@ -273,7 +275,7 @@
     </text>
 
     <text x="20" y="492" font-size="13">
-      <tspan fill="#3fb950">  * </tspan><tspan fill="#e3b341">d5a3c0 </tspan><tspan fill="#e6edf3">init: Appointment Management System</tspan>
+      <tspan fill="#3fb950">  * </tspan><tspan fill="#e3b341">d5a3c0 </tspan><tspan fill="#e6edf3">feat: network device profiler </tspan><tspan fill="#39c5cf">(Recona)</tspan>
     </text>
   </g>
 
