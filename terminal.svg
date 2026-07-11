@@ -77,7 +77,7 @@
     </text>
 
     <text x="20" y="90" font-size="13">
-      <tspan fill="#484f58">  role:     </tspan><tspan fill="#e6edf3">Software Engineer</tspan><tspan fill="#484f58"> — web · systems · ML/CV · IoT</tspan>
+      <tspan fill="#484f58">  role:     </tspan><tspan fill="#e6edf3" font-weight="bold">Software Engineer</tspan><tspan fill="#484f58"> — builds and ships end-to-end products</tspan>
     </text>
 
     <text x="20" y="108" font-size="13">
@@ -134,56 +134,56 @@
       <tspan fill="#e3b341">★ 140</tspan>
     </text>
 
-    <!-- Sign2Text  Python blue -->
-    <circle cx="28" cy="221" r="4" fill="#3572a5"/>
-    <text x="37" y="226" font-size="13">
-      <tspan fill="#58a6ff">Sign2Text</tspan><tspan fill="#30363d">/</tspan>
-      <tspan fill="#484f58">   Nepali Sign Language → text, ML + CV   </tspan>
-      <tspan fill="#e3b341">★ 9</tspan>
-    </text>
-
-    <!-- Recona  Go cyan -->
-    <circle cx="28" cy="239" r="4" fill="#00add8"/>
-    <text x="37" y="244" font-size="13">
-      <tspan fill="#58a6ff">Recona</tspan><tspan fill="#30363d">/</tspan>
-      <tspan fill="#484f58">   network scanner + device profiler, Go TUI</tspan>
-    </text>
-
-    <!-- Singularity  JS yellow -->
-    <circle cx="28" cy="257" r="4" fill="#f7df1e"/>
-    <text x="37" y="262" font-size="13">
-      <tspan fill="#58a6ff">Singularity</tspan><tspan fill="#30363d">/</tspan>
-      <tspan fill="#484f58">   real-time 3D black hole, Three.js + shaders   </tspan>
-      <tspan fill="#e3b341">★ 4</tspan>
-    </text>
-
     <!-- AlgoLab  TS blue -->
-    <circle cx="28" cy="275" r="4" fill="#3178c6"/>
-    <text x="37" y="280" font-size="13">
+    <circle cx="28" cy="221" r="4" fill="#3178c6"/>
+    <text x="37" y="226" font-size="13">
       <tspan fill="#58a6ff">AlgoLab</tspan><tspan fill="#30363d">/</tspan>
-      <tspan fill="#484f58">   interactive algorithm visualizer, Next.js</tspan>
+      <tspan fill="#484f58">   algorithm learning platform, Next.js + TypeScript</tspan>
     </text>
 
     <!-- Library-Management-System  TS blue -->
-    <circle cx="28" cy="293" r="4" fill="#3178c6"/>
-    <text x="37" y="298" font-size="13">
+    <circle cx="28" cy="239" r="4" fill="#3178c6"/>
+    <text x="37" y="244" font-size="13">
       <tspan fill="#58a6ff">Library-Management-System</tspan><tspan fill="#30363d">/</tspan>
-      <tspan fill="#484f58">   full-stack, Next.js 15 + PostgreSQL</tspan>
+      <tspan fill="#484f58">   university library platform, Next.js 15 + PostgreSQL</tspan>
+    </text>
+
+    <!-- Sign2Text  Python blue -->
+    <circle cx="28" cy="257" r="4" fill="#3572a5"/>
+    <text x="37" y="262" font-size="13">
+      <tspan fill="#58a6ff">Sign2Text</tspan><tspan fill="#30363d">/</tspan>
+      <tspan fill="#484f58">   sign language → text translation app   </tspan>
+      <tspan fill="#e3b341">★ 9</tspan>
+    </text>
+
+    <!-- Singularity  JS yellow -->
+    <circle cx="28" cy="275" r="4" fill="#f7df1e"/>
+    <text x="37" y="280" font-size="13">
+      <tspan fill="#58a6ff">Singularity</tspan><tspan fill="#30363d">/</tspan>
+      <tspan fill="#484f58">   real-time black hole renderer, Three.js + GLSL   </tspan>
+      <tspan fill="#e3b341">★ 4</tspan>
+    </text>
+
+    <!-- Recona  Go cyan -->
+    <circle cx="28" cy="293" r="4" fill="#00add8"/>
+    <text x="37" y="298" font-size="13">
+      <tspan fill="#58a6ff">Recona</tspan><tspan fill="#30363d">/</tspan>
+      <tspan fill="#484f58">   network scanner &amp; device profiler CLI, Go</tspan>
     </text>
 
     <!-- Public-Bus-Live-Tracking-System  C++ purple -->
     <circle cx="28" cy="311" r="4" fill="#9c4bdb"/>
     <text x="37" y="316" font-size="13">
       <tspan fill="#58a6ff">Public-Bus-Live-Tracking-System</tspan><tspan fill="#30363d">/</tspan>
-      <tspan fill="#484f58">   IoT, ESP8266 + GPS   </tspan>
+      <tspan fill="#484f58">   live GPS tracking system   </tspan>
       <tspan fill="#e3b341">★ 10</tspan>
     </text>
 
-    <!-- hybrid-missing-data-recovery  Python blue -->
-    <circle cx="28" cy="329" r="4" fill="#3572a5"/>
+    <!-- Lofi-Station  TS blue -->
+    <circle cx="28" cy="329" r="4" fill="#3178c6"/>
     <text x="37" y="334" font-size="13">
-      <tspan fill="#58a6ff">hybrid-missing-data-recovery</tspan><tspan fill="#30363d">/</tspan>
-      <tspan fill="#484f58">   interpolation + Random Forest ensemble</tspan>
+      <tspan fill="#58a6ff">Lofi-Station</tspan><tspan fill="#30363d">/</tspan>
+      <tspan fill="#484f58">   ambient music player web app, React + TypeScript</tspan>
     </text>
   </g>
 
@@ -223,19 +223,19 @@
     </text>
 
     <text x="20" y="398" font-size="13">
-      <tspan fill="#484f58">  web         </tspan><tspan fill="#e6edf3">React · Next.js · Node.js · Django · ASP.NET Core</tspan>
+      <tspan fill="#484f58">  frontend    </tspan><tspan fill="#e6edf3">React · Next.js · Three.js · GSAP · Tailwind</tspan>
     </text>
 
     <text x="20" y="416" font-size="13">
-      <tspan fill="#484f58">  data / ml   </tspan><tspan fill="#e6edf3">scikit-learn · OpenCV · pandas · PostgreSQL</tspan>
+      <tspan fill="#484f58">  backend     </tspan><tspan fill="#e6edf3">Node.js · Django · ASP.NET Core · PostgreSQL</tspan>
     </text>
 
     <text x="20" y="434" font-size="13">
-      <tspan fill="#484f58">  systems     </tspan><tspan fill="#e6edf3">Go + Rust CLI/TUI tools · networking · ESP8266</tspan>
+      <tspan fill="#484f58">  tooling     </tspan><tspan fill="#e6edf3">Go &amp; Rust CLI/TUI apps · Git · shell scripting</tspan>
     </text>
 
     <text x="20" y="452" font-size="13">
-      <tspan fill="#484f58">  graphics    </tspan><tspan fill="#e6edf3">Three.js · WebGL · GSAP · Framer Motion</tspan>
+      <tspan fill="#484f58">  design      </tspan><tspan fill="#e6edf3">Figma · UI/UX · design systems</tspan>
     </text>
   </g>
 
@@ -275,7 +275,7 @@
     </text>
 
     <text x="20" y="516" font-size="13">
-      <tspan fill="#484f58">  email:  </tspan><tspan fill="#58a6ff">claudehimalayan@gmail.com</tspan>
+      <tspan fill="#484f58">  email:  </tspan><tspan fill="#58a6ff">prashantkoirala465@gmail.com</tspan>
     </text>
 
     <text x="20" y="534" font-size="13">
