@@ -1,34 +1,34 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 520" width="760" height="520">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 588" width="760" height="588">
   <defs>
     <style>text { font-family: 'JetBrains Mono','Fira Code','Cascadia Code','Menlo',monospace; }</style>
 
     <clipPath id="clip1">
       <rect x="246" y="40" width="0" height="18">
-        <animate attributeName="width" from="0" to="514" begin="0.3s" dur="0.6s" fill="freeze"/>
+        <animate attributeName="width" from="0" to="514" begin="0.3s" dur="0.5s" fill="freeze"/>
       </rect>
     </clipPath>
 
     <clipPath id="clip2">
-      <rect x="246" y="140" width="0" height="18">
+      <rect x="246" y="176" width="0" height="18">
         <animate attributeName="width" from="0" to="514" begin="2.0s" dur="0.7s" fill="freeze"/>
       </rect>
     </clipPath>
 
     <clipPath id="clip3">
-      <rect x="246" y="274" width="0" height="18">
-        <animate attributeName="width" from="0" to="514" begin="4.0s" dur="0.7s" fill="freeze"/>
+      <rect x="246" y="348" width="0" height="18">
+        <animate attributeName="width" from="0" to="514" begin="4.4s" dur="0.6s" fill="freeze"/>
       </rect>
     </clipPath>
 
     <clipPath id="clip4">
-      <rect x="246" y="406" width="0" height="18">
-        <animate attributeName="width" from="0" to="514" begin="6.2s" dur="0.8s" fill="freeze"/>
+      <rect x="246" y="466" width="0" height="18">
+        <animate attributeName="width" from="0" to="514" begin="6.6s" dur="0.6s" fill="freeze"/>
       </rect>
     </clipPath>
   </defs>
 
   <!-- background -->
-  <rect width="760" height="520" rx="10" fill="#0d1117"/>
+  <rect width="760" height="588" rx="10" fill="#0d1117"/>
 
   <!-- title bar -->
   <rect width="760" height="36" rx="10" fill="#161b22"/>
@@ -43,11 +43,11 @@
   <text x="380" y="23" text-anchor="middle" font-size="12" fill="#484f58">prashantkoirala465 — zsh</text>
 
   <!-- terminal body -->
-  <rect x="0" y="36" width="760" height="484" fill="#0d1117"/>
+  <rect x="0" y="36" width="760" height="552" fill="#0d1117"/>
 
 
   <!-- ======================================================
-       PROMPT 1  (always visible at t=0)
+       PROMPT 1: whoami  (types at t=0.3s)
        ====================================================== -->
 
   <text x="20" y="54" font-size="13">
@@ -60,35 +60,35 @@
   </text>
 
   <rect x="246" y="41" width="7" height="13" rx="1" fill="#e6edf3">
-    <animate attributeName="x" from="246" to="293" begin="0.3s" dur="0.6s" fill="freeze"/>
-    <animate attributeName="opacity" from="1" to="0" begin="0.9s" dur="0.01s" fill="freeze"/>
+    <animate attributeName="x" from="246" to="293" begin="0.3s" dur="0.5s" fill="freeze"/>
+    <animate attributeName="opacity" from="1" to="0" begin="0.8s" dur="0.01s" fill="freeze"/>
   </rect>
 
 
   <!-- ======================================================
-       WHOAMI OUTPUT  (t=0.9s)
+       WHOAMI OUTPUT  (t=0.8s)
        ====================================================== -->
 
   <g opacity="0">
-    <animate attributeName="opacity" from="0" to="1" begin="0.9s" dur="0.01s" fill="freeze"/>
+    <animate attributeName="opacity" from="0" to="1" begin="0.8s" dur="0.01s" fill="freeze"/>
 
-    <!-- name line -->
     <text x="20" y="72" font-size="13">
       <tspan fill="#484f58">  name:     </tspan><tspan fill="#e6edf3" font-weight="bold">Prashant Koirala</tspan>
     </text>
 
-    <!-- location line -->
     <text x="20" y="90" font-size="13">
+      <tspan fill="#484f58">  role:     </tspan><tspan fill="#e6edf3">Software Engineer</tspan><tspan fill="#484f58"> — web · systems · ML/CV · IoT</tspan>
+    </text>
+
+    <text x="20" y="108" font-size="13">
       <tspan fill="#484f58">  location: </tspan><tspan fill="#39c5cf">Kathmandu, Nepal</tspan>
     </text>
 
-    <!-- web line -->
-    <text x="20" y="108" font-size="13">
+    <text x="20" y="126" font-size="13">
       <tspan fill="#484f58">  web:      </tspan><tspan fill="#58a6ff">prashantkoirala.info.np</tspan>
     </text>
 
-    <!-- stats line -->
-    <text x="20" y="126" font-size="13">
+    <text x="20" y="144" font-size="13">
       <tspan fill="#484f58">  repos: </tspan><tspan fill="#e3b341">51</tspan>
       <tspan fill="#484f58">   followers: </tspan><tspan fill="#e3b341">43</tspan>
       <tspan fill="#484f58">   hireable: </tspan><tspan fill="#3fb950">true</tspan>
@@ -97,202 +97,206 @@
 
 
   <!-- ======================================================
-       PROMPT 2  (t=2.0s)
+       PROMPT 2: ls featured-projects/  (t=2.0s)
        ====================================================== -->
 
   <g opacity="0">
     <animate attributeName="opacity" from="0" to="1" begin="2.0s" dur="0.01s" fill="freeze"/>
-    <text x="20" y="154" font-size="13">
+    <text x="20" y="190" font-size="13">
       <tspan fill="#3fb950">prashantkoirala465</tspan><tspan fill="#484f58">@</tspan><tspan fill="#58a6ff">github</tspan><tspan fill="#e6edf3">:~$ </tspan>
     </text>
   </g>
 
-  <text x="246" y="154" font-size="13" fill="#e6edf3" clip-path="url(#clip2)" opacity="0">
+  <text x="246" y="190" font-size="13" fill="#e6edf3" clip-path="url(#clip2)" opacity="0">
     <animate attributeName="opacity" from="0" to="1" begin="2.0s" dur="0.01s" fill="freeze"/>
-    ls projects/
+    ls featured-projects/
   </text>
 
-  <rect x="246" y="141" width="7" height="13" rx="1" fill="#e6edf3" opacity="0">
+  <rect x="246" y="177" width="7" height="13" rx="1" fill="#e6edf3" opacity="0">
     <animate attributeName="opacity" from="0" to="1" begin="2.0s" dur="0.01s" fill="freeze"/>
-    <animate attributeName="x" from="246" to="340" begin="2.0s" dur="0.7s" fill="freeze"/>
+    <animate attributeName="x" from="246" to="410" begin="2.0s" dur="0.7s" fill="freeze"/>
     <animate attributeName="opacity" from="1" to="0" begin="2.7s" dur="0.01s" fill="freeze"/>
   </rect>
 
 
   <!-- ======================================================
-       LS OUTPUT  (t=2.7s)
-       each project on own line with colored dot badge
+       LS OUTPUT  (t=2.7s) — 8 projects, language dot + note + stars
        ====================================================== -->
 
   <g opacity="0">
     <animate attributeName="opacity" from="0" to="1" begin="2.7s" dur="0.01s" fill="freeze"/>
 
     <!-- web-development-portfolio  JS yellow -->
-    <circle cx="28" cy="169" r="4" fill="#f7df1e"/>
-    <text x="37" y="174" font-size="13">
+    <circle cx="28" cy="203" r="4" fill="#f7df1e"/>
+    <text x="37" y="208" font-size="13">
       <tspan fill="#58a6ff">web-development-portfolio</tspan><tspan fill="#30363d">/</tspan>
-      <tspan fill="#484f58">   </tspan>
+      <tspan fill="#484f58">   GSAP · Lenis   </tspan>
       <tspan fill="#e3b341">★ 140</tspan>
     </text>
 
-    <!-- AlgoLab  TS blue -->
-    <circle cx="28" cy="187" r="4" fill="#3178c6"/>
-    <text x="37" y="192" font-size="13">
-      <tspan fill="#58a6ff">AlgoLab</tspan><tspan fill="#30363d">/</tspan>
-      <tspan fill="#484f58">   TypeScript</tspan>
-    </text>
-
-    <!-- pomodoro-tui  TS blue -->
-    <circle cx="28" cy="205" r="4" fill="#3178c6"/>
-    <text x="37" y="210" font-size="13">
-      <tspan fill="#58a6ff">pomodoro-tui</tspan><tspan fill="#30363d">/</tspan>
-      <tspan fill="#484f58">   TypeScript</tspan>
-    </text>
-
-    <!-- Singularity  JS yellow -->
-    <circle cx="28" cy="223" r="4" fill="#f7df1e"/>
-    <text x="37" y="228" font-size="13">
-      <tspan fill="#58a6ff">Singularity</tspan><tspan fill="#30363d">/</tspan>
-      <tspan fill="#484f58">   Three.js   </tspan>
-      <tspan fill="#e3b341">★ 4</tspan>
-    </text>
-
-    <!-- Sign2Text  ML/JS -->
-    <circle cx="28" cy="241" r="4" fill="#3572a5"/>
-    <text x="37" y="246" font-size="13">
+    <!-- Sign2Text  Python blue -->
+    <circle cx="28" cy="221" r="4" fill="#3572a5"/>
+    <text x="37" y="226" font-size="13">
       <tspan fill="#58a6ff">Sign2Text</tspan><tspan fill="#30363d">/</tspan>
-      <tspan fill="#484f58">   ML + CV   </tspan>
+      <tspan fill="#484f58">   Nepali Sign Language → text, ML + CV   </tspan>
       <tspan fill="#e3b341">★ 9</tspan>
     </text>
 
-    <!-- UI-UX-Project  design blue -->
-    <circle cx="28" cy="259" r="4" fill="#58a6ff"/>
-    <text x="37" y="264" font-size="13">
-      <tspan fill="#58a6ff">UI-UX-Project</tspan><tspan fill="#30363d">/</tspan>
-      <tspan fill="#484f58">   Figma   </tspan>
-      <tspan fill="#e3b341">★ 17</tspan>
+    <!-- Recona  Go cyan -->
+    <circle cx="28" cy="239" r="4" fill="#00add8"/>
+    <text x="37" y="244" font-size="13">
+      <tspan fill="#58a6ff">Recona</tspan><tspan fill="#30363d">/</tspan>
+      <tspan fill="#484f58">   network scanner + device profiler, Go TUI</tspan>
+    </text>
+
+    <!-- Singularity  JS yellow -->
+    <circle cx="28" cy="257" r="4" fill="#f7df1e"/>
+    <text x="37" y="262" font-size="13">
+      <tspan fill="#58a6ff">Singularity</tspan><tspan fill="#30363d">/</tspan>
+      <tspan fill="#484f58">   real-time 3D black hole, Three.js + shaders   </tspan>
+      <tspan fill="#e3b341">★ 4</tspan>
+    </text>
+
+    <!-- AlgoLab  TS blue -->
+    <circle cx="28" cy="275" r="4" fill="#3178c6"/>
+    <text x="37" y="280" font-size="13">
+      <tspan fill="#58a6ff">AlgoLab</tspan><tspan fill="#30363d">/</tspan>
+      <tspan fill="#484f58">   interactive algorithm visualizer, Next.js</tspan>
+    </text>
+
+    <!-- Library-Management-System  TS blue -->
+    <circle cx="28" cy="293" r="4" fill="#3178c6"/>
+    <text x="37" y="298" font-size="13">
+      <tspan fill="#58a6ff">Library-Management-System</tspan><tspan fill="#30363d">/</tspan>
+      <tspan fill="#484f58">   full-stack, Next.js 15 + PostgreSQL</tspan>
+    </text>
+
+    <!-- Public-Bus-Live-Tracking-System  C++ purple -->
+    <circle cx="28" cy="311" r="4" fill="#9c4bdb"/>
+    <text x="37" y="316" font-size="13">
+      <tspan fill="#58a6ff">Public-Bus-Live-Tracking-System</tspan><tspan fill="#30363d">/</tspan>
+      <tspan fill="#484f58">   IoT, ESP8266 + GPS   </tspan>
+      <tspan fill="#e3b341">★ 10</tspan>
+    </text>
+
+    <!-- hybrid-missing-data-recovery  Python blue -->
+    <circle cx="28" cy="329" r="4" fill="#3572a5"/>
+    <text x="37" y="334" font-size="13">
+      <tspan fill="#58a6ff">hybrid-missing-data-recovery</tspan><tspan fill="#30363d">/</tspan>
+      <tspan fill="#484f58">   interpolation + Random Forest ensemble</tspan>
     </text>
   </g>
 
 
   <!-- ======================================================
-       PROMPT 3  (t=4.0s)
+       PROMPT 3: cat stack.txt  (t=4.4s)
        ====================================================== -->
 
   <g opacity="0">
-    <animate attributeName="opacity" from="0" to="1" begin="4.0s" dur="0.01s" fill="freeze"/>
-    <text x="20" y="288" font-size="13">
+    <animate attributeName="opacity" from="0" to="1" begin="4.4s" dur="0.01s" fill="freeze"/>
+    <text x="20" y="362" font-size="13">
       <tspan fill="#3fb950">prashantkoirala465</tspan><tspan fill="#484f58">@</tspan><tspan fill="#58a6ff">github</tspan><tspan fill="#e6edf3">:~$ </tspan>
     </text>
   </g>
 
-  <text x="246" y="288" font-size="13" fill="#e6edf3" clip-path="url(#clip3)" opacity="0">
-    <animate attributeName="opacity" from="0" to="1" begin="4.0s" dur="0.01s" fill="freeze"/>
-    cat languages.txt
+  <text x="246" y="362" font-size="13" fill="#e6edf3" clip-path="url(#clip3)" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="4.4s" dur="0.01s" fill="freeze"/>
+    cat stack.txt
   </text>
 
-  <rect x="246" y="275" width="7" height="13" rx="1" fill="#e6edf3" opacity="0">
-    <animate attributeName="opacity" from="0" to="1" begin="4.0s" dur="0.01s" fill="freeze"/>
-    <animate attributeName="x" from="246" to="379" begin="4.0s" dur="0.7s" fill="freeze"/>
-    <animate attributeName="opacity" from="1" to="0" begin="4.7s" dur="0.01s" fill="freeze"/>
+  <rect x="246" y="349" width="7" height="13" rx="1" fill="#e6edf3" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="4.4s" dur="0.01s" fill="freeze"/>
+    <animate attributeName="x" from="246" to="348" begin="4.4s" dur="0.6s" fill="freeze"/>
+    <animate attributeName="opacity" from="1" to="0" begin="5.0s" dur="0.01s" fill="freeze"/>
   </rect>
 
 
   <!-- ======================================================
-       LANGUAGES OUTPUT  (t=4.7s)
-       each language on own line with ecosystem color dot
+       STACK OUTPUT  (t=5.0s)
        ====================================================== -->
 
   <g opacity="0">
-    <animate attributeName="opacity" from="0" to="1" begin="4.7s" dur="0.01s" fill="freeze"/>
+    <animate attributeName="opacity" from="0" to="1" begin="5.0s" dur="0.01s" fill="freeze"/>
 
-    <!-- JavaScript  yellow -->
-    <circle cx="28" cy="301" r="4" fill="#f7df1e"/>
-    <text x="37" y="306" font-size="13" fill="#e6edf3">JavaScript</text>
+    <text x="20" y="380" font-size="13">
+      <tspan fill="#484f58">  languages   </tspan><tspan fill="#e6edf3">TypeScript · JavaScript · Python · Go · C++ · C#</tspan>
+    </text>
 
-    <!-- TypeScript  blue -->
-    <circle cx="28" cy="319" r="4" fill="#3178c6"/>
-    <text x="37" y="324" font-size="13" fill="#e6edf3">TypeScript</text>
+    <text x="20" y="398" font-size="13">
+      <tspan fill="#484f58">  web         </tspan><tspan fill="#e6edf3">React · Next.js · Node.js · Django · ASP.NET Core</tspan>
+    </text>
 
-    <!-- C++  purple -->
-    <circle cx="28" cy="337" r="4" fill="#9c4bdb"/>
-    <text x="37" y="342" font-size="13" fill="#e6edf3">C++</text>
+    <text x="20" y="416" font-size="13">
+      <tspan fill="#484f58">  data / ml   </tspan><tspan fill="#e6edf3">scikit-learn · OpenCV · pandas · PostgreSQL</tspan>
+    </text>
 
-    <!-- Go  cyan -->
-    <circle cx="28" cy="355" r="4" fill="#00add8"/>
-    <text x="37" y="360" font-size="13" fill="#e6edf3">Go</text>
+    <text x="20" y="434" font-size="13">
+      <tspan fill="#484f58">  systems     </tspan><tspan fill="#e6edf3">Go + Rust CLI/TUI tools · networking · ESP8266</tspan>
+    </text>
 
-    <!-- Python  blue -->
-    <circle cx="28" cy="373" r="4" fill="#3572a5"/>
-    <text x="37" y="378" font-size="13" fill="#e6edf3">Python</text>
-
-    <!-- HTML/CSS  orange -->
-    <circle cx="28" cy="391" r="4" fill="#e34c26"/>
-    <text x="37" y="396" font-size="13" fill="#e6edf3">HTML/CSS</text>
+    <text x="20" y="452" font-size="13">
+      <tspan fill="#484f58">  graphics    </tspan><tspan fill="#e6edf3">Three.js · WebGL · GSAP · Framer Motion</tspan>
+    </text>
   </g>
 
 
   <!-- ======================================================
-       PROMPT 4  (t=6.2s)
+       PROMPT 4: ./contact.sh  (t=6.6s)
        ====================================================== -->
 
   <g opacity="0">
-    <animate attributeName="opacity" from="0" to="1" begin="6.2s" dur="0.01s" fill="freeze"/>
-    <text x="20" y="420" font-size="13">
+    <animate attributeName="opacity" from="0" to="1" begin="6.6s" dur="0.01s" fill="freeze"/>
+    <text x="20" y="480" font-size="13">
       <tspan fill="#3fb950">prashantkoirala465</tspan><tspan fill="#484f58">@</tspan><tspan fill="#58a6ff">github</tspan><tspan fill="#e6edf3">:~$ </tspan>
     </text>
   </g>
 
-  <text x="246" y="420" font-size="13" fill="#e6edf3" clip-path="url(#clip4)" opacity="0">
-    <animate attributeName="opacity" from="0" to="1" begin="6.2s" dur="0.01s" fill="freeze"/>
-    git log --oneline --graph
+  <text x="246" y="480" font-size="13" fill="#e6edf3" clip-path="url(#clip4)" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="6.6s" dur="0.01s" fill="freeze"/>
+    ./contact.sh
   </text>
 
-  <rect x="246" y="407" width="7" height="13" rx="1" fill="#e6edf3" opacity="0">
-    <animate attributeName="opacity" from="0" to="1" begin="6.2s" dur="0.01s" fill="freeze"/>
-    <animate attributeName="x" from="246" to="433" begin="6.2s" dur="0.8s" fill="freeze"/>
-    <animate attributeName="opacity" from="1" to="0" begin="7.0s" dur="0.01s" fill="freeze"/>
+  <rect x="246" y="467" width="7" height="13" rx="1" fill="#e6edf3" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="6.6s" dur="0.01s" fill="freeze"/>
+    <animate attributeName="x" from="246" to="340" begin="6.6s" dur="0.6s" fill="freeze"/>
+    <animate attributeName="opacity" from="1" to="0" begin="7.2s" dur="0.01s" fill="freeze"/>
   </rect>
 
 
   <!-- ======================================================
-       GIT LOG OUTPUT  (t=7.0s)
+       CONTACT OUTPUT  (t=7.2s)
        ====================================================== -->
 
   <g opacity="0">
-    <animate attributeName="opacity" from="0" to="1" begin="7.0s" dur="0.01s" fill="freeze"/>
+    <animate attributeName="opacity" from="0" to="1" begin="7.2s" dur="0.01s" fill="freeze"/>
 
-    <text x="20" y="438" font-size="13">
-      <tspan fill="#3fb950">  * </tspan><tspan fill="#e3b341">3a1f2b </tspan><tspan fill="#e6edf3">feat: add sorting visualizer </tspan><tspan fill="#39c5cf">(AlgoLab)</tspan>
+    <text x="20" y="498" font-size="13">
+      <tspan fill="#484f58">  web:    </tspan><tspan fill="#58a6ff">https://prashantkoirala.info.np</tspan>
     </text>
 
-    <text x="20" y="456" font-size="13">
-      <tspan fill="#3fb950">  * </tspan><tspan fill="#e3b341">9c4e7d </tspan><tspan fill="#e6edf3">feat: gravitational lensing shader </tspan><tspan fill="#39c5cf">(Singularity)</tspan>
+    <text x="20" y="516" font-size="13">
+      <tspan fill="#484f58">  email:  </tspan><tspan fill="#58a6ff">claudehimalayan@gmail.com</tspan>
     </text>
 
-    <text x="20" y="474" font-size="13">
-      <tspan fill="#3fb950">  * </tspan><tspan fill="#e3b341">2b8f1a </tspan><tspan fill="#e6edf3">fix: responsive layout </tspan><tspan fill="#39c5cf">(web-portfolio)</tspan>
-    </text>
-
-    <text x="20" y="492" font-size="13">
-      <tspan fill="#3fb950">  * </tspan><tspan fill="#e3b341">d5a3c0 </tspan><tspan fill="#e6edf3">feat: network device profiler </tspan><tspan fill="#39c5cf">(Recona)</tspan>
+    <text x="20" y="534" font-size="13">
+      <tspan fill="#484f58">  status: </tspan><tspan fill="#3fb950">open to software engineering roles</tspan>
     </text>
   </g>
 
 
   <!-- ======================================================
-       FINAL PROMPT + blinking cursor  (t=8.0s)
+       FINAL PROMPT + blinking cursor  (t=8.2s)
        ====================================================== -->
 
   <g opacity="0">
-    <animate attributeName="opacity" from="0" to="1" begin="8.0s" dur="0.01s" fill="freeze"/>
+    <animate attributeName="opacity" from="0" to="1" begin="8.2s" dur="0.01s" fill="freeze"/>
 
-    <text x="20" y="510" font-size="13">
+    <text x="20" y="562" font-size="13">
       <tspan fill="#3fb950">prashantkoirala465</tspan><tspan fill="#484f58">@</tspan><tspan fill="#58a6ff">github</tspan><tspan fill="#e6edf3">:~$ </tspan>
     </text>
 
-    <rect x="246" y="497" width="7" height="13" rx="1" fill="#e6edf3">
-      <animate attributeName="opacity" values="1;0;1" dur="1s" begin="8.0s" repeatCount="indefinite"/>
+    <rect x="246" y="549" width="7" height="13" rx="1" fill="#e6edf3">
+      <animate attributeName="opacity" values="1;0;1" dur="1s" begin="8.2s" repeatCount="indefinite"/>
     </rect>
   </g>
 
